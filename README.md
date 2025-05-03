@@ -9,7 +9,7 @@ power_off_links_down.sh
 
 
 need to add this file into /etc/config/crontab 
-# * * * * * /share/homes/admin/power_off_link_down.sh
+ * * * * * /share/homes/admin/power_off_link_down.sh
 
 Make above crontab file effect:
 crontab /etc/config/crontab && /etc/init.d/crond.sh restart
