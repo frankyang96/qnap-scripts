@@ -16,9 +16,22 @@ The script performs the following:
 
 ### Usage
 
-#### 1. Place the Script
+### 1. Place the Script
 
-Copy the script to your home directory (or preferred path):
+### Copy the script to your home directory (or preferred path):
 
 ```bash
 /share/homes/admin/power_off_links_down.sh
+```
+
+### add following into /etc/config/crontab
+```bash
+ * * * * * /share/homes/admin/power_off_link_down.sh
+```
+
+
+### Make above crontab file effect:
+
+```bash
+crontab /etc/config/crontab && /etc/init.d/crond.sh restart
+```
