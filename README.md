@@ -35,3 +35,30 @@ The script performs the following:
 ```bash
 crontab /etc/config/crontab && /etc/init.d/crond.sh restart
 ```
+
+
+## Script: `check_cert.sh`
+### Purpose
+
+The script performs the following:
+
+1. check if certs under acme is different.
+2. If different then replace qnap apache certs and jellyfin certs.
+3. then call resend-api to send mail
+
+### Usage
+
+### 1. Place the Script
+
+### Copy the script to your home directory (or preferred path):
+
+```bash
+/share/homes/admin/check_cert.sh
+```
+
+### add following into /etc/config/crontab
+```bash
+ 35 04 * * * /share/homes/admin/check_cert.sh
+```
+
+
